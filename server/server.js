@@ -20,8 +20,8 @@ app.use('https://mern1-backend.onrender.com/api/pratimai', pratimaiRoutes)
 // connect to db
 mongoose.connect(process.env.URI)
     .then(() => {
-        app.listen('https://mern1-backend.onrender.com', () => {
-            console.log('listening on port', 'https://mern1-backend.onrender.com')
+        app.listen(process.env.PORT, () => {
+            console.log('listening on port', process.env.PORT)
         })
     })
     .catch((err) => console.log(err))
